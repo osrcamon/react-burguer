@@ -6,9 +6,11 @@ import Backdrop from '../../UI/Backdrop/Backdrop';
 import classes from './SideDrawer.css';
 
 const SideDrawer = props => {
-  let attachedClasses = [classes.SideDrawer, classes.Close];
+  const attachedClasses = [classes.SideDrawer, ];
   if (props.open) {
-    attachedClasses = [classes.SideDrawer, classes.Open];
+    attachedClasses.push(classes.Open);
+  } else {
+    attachedClasses.push(classes.Close)
   }
   return (
     <React.Fragment>
